@@ -51,6 +51,46 @@ Every video starts as a text script: the facts, what is on screen and what the v
 When a screen changes, the script is edited and only that video is rebuilt. Nothing was recorded on a live system,
 and all the tools are free.
 
+## Prompts we gave Claude Code (copy and adapt)
+
+These are the instructions we used, in order. Replace the parts in `<angle brackets>`. Claude Code writes the
+scripts and the tooling (Playwright, edge-tts, ffmpeg) itself; you read, watch and approve.
+
+**1. Plan the videos**
+> Here is our support training plan: `<file or list of topics>`. For each topic write a video script in
+> `scripts/<ID>.md`: the facts, each checked in the code or documents and cited; a shot list with timings;
+> the narration in English with `[m:ss]` cues; a Portuguese translation. Target 2–3 minutes per video.
+> Make the outlines first; do not record yet.
+
+**2. Record on a test copy**
+> Record the videos on the test copy at `<URL>` with the test accounts in `<file>`. Never touch the live
+> system. Use test data labelled "TEST – ignore". 1280×720, a visible cursor, one scene per narration cue,
+> slow deliberate clicks. Save the takes in `recordings/`.
+
+**3. Voice, subtitles, assembly**
+> Narrate every video in English with a computer voice (edge-tts), add subtitles in English and Portuguese,
+> title and end cards in our colours, and export `final/en/<ID>.mp4` with the `.en.srt` and `.pt.srt` files.
+
+**4. Check**
+> Check every video frame by frame against its narration: no gaps, every label named in the narration is
+> visible at that moment, nothing secret or personal on screen. Report what you found before publishing.
+
+**5. Publish**
+> Upload the videos and subtitle files to the Drive folder `<link>`. Build a single-page site with an
+> English/Portuguese switch that plays them from Drive, and publish it on GitHub Pages. Link each topic in
+> the training plan to its video.
+
+**6. Changes later**
+> The screens must be in English. Re-record all videos with the English interface; keep the scripts and keep
+> the old videos.
+
+> The reopen screen changed its label. Redo video `<ID>` only; everything else stays as it is.
+
+**For a new product**
+> Here is a test copy of `<product>` at `<URL>` with these test logins: `<list>`. Make training videos for
+> these tasks: `<list>`. Work the same way as github.com/Hari-egov/fala-cidadao-video-guide: scripts first
+> for review, then record, narrate, subtitle, check, publish.
+
 ## How this page is built
 
 `index.html` is the whole site. It is generated from a list of the videos (titles, lengths, Drive links) by a small
