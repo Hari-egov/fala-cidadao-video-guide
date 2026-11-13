@@ -23,6 +23,22 @@ The video files are on Google Drive and play inside the page.
 The same videos as files, with both subtitle tracks:
 https://drive.google.com/drive/folders/15JwJfgKHSBNZhjkhYwT32CFuL8ZXR9GU
 
+## Prerequisites
+
+What we had before starting, all free except the Claude plan:
+
+| Need | What it is for | What we used |
+|---|---|---|
+| A test copy of the system | Recording on test accounts and test data; never the live system | A local copy and a training server |
+| A laptop | Everything runs on it | Ubuntu 20.04 |
+| Claude Code | Writes the scripts, runs the steps, checks the videos | Claude Code 2.1 |
+| Node.js with Playwright and Chromium | The browser robot that records the screens | Node.js 20, playwright-core 1.59, Chromium |
+| Python with edge-tts | The computer voice, one voice per language | Python 3.8, edge-tts 7.3 |
+| ffmpeg | Puts picture, voice, subtitles and title cards together | ffmpeg 4.2 |
+| Git and a GitHub account | Publishing this page on GitHub Pages | Git 2.25 |
+| A Google account | The Drive folder with the videos and subtitle tracks | Google Drive |
+| One reviewer | Someone who knows the product, to read each script and watch each video | |
+
 ## How the videos were made
 
 Every video starts as a text script: the facts, what is on screen and what the voice says, second by second.
